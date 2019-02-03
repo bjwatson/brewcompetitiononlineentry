@@ -131,4 +131,9 @@ $state = $purifier->purify($_POST['brewerState']);
 if (strlen($state) > 2) $state = standardize_name($state);
 else $state = strtoupper($state);
 
+if (isset($_POST['brewerShirtGender'])) $brewerShirtGender = $_POST['brewerShirtGender'];
+else $brewerShirtGender = "";
+if (isset($_POST['brewerShirtSize'])) $brewerShirtSize = $_POST['brewerShirtSize'];
+else $brewerShirtSize = "";
+
 ?>

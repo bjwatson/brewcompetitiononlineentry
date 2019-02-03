@@ -42,6 +42,8 @@ if (isset($_SERVER['HTTP_REFERER'])) {
 	setcookie("brewerBreweryTTB", $brewerBreweryTTB, 0, "/");
 	setcookie("brewerJudgeID", $brewerJudgeID, 0, "/");
 	setcookie("brewerProAm", $brewerProAm, 0, "/");
+	setcookie("brewerShirtGender", $brewerShirtGender, 0, "/");
+	setcookie("brewerShirtSize", $brewerShirtSize, 0, "/");
 
 	if ($filter != "admin") {
 
@@ -147,6 +149,9 @@ if (isset($_SERVER['HTTP_REFERER'])) {
 			  brewerJudge,
 			  brewerJudgeID,
 
+			  brewerShirtGender,
+			  brewerShirtSize,
+
 			  brewerJudgeMead,
 			  brewerJudgeRank,
 			  brewerJudgeLocation,
@@ -164,7 +169,8 @@ if (isset($_SERVER['HTTP_REFERER'])) {
 			%s, %s, %s, %s, %s,
 			%s, %s, %s, %s, %s,
 			%s, %s, %s, %s, %s,
-			%s, %s, %s, %s, %s
+			%s, %s, %s, %s, %s,
+			%s, %s
 			)",
 						   GetSQLValueString($row_user['id'], "int"),
 						   GetSQLValueString($first_name, "text"),
@@ -181,6 +187,8 @@ if (isset($_SERVER['HTTP_REFERER'])) {
 						   GetSQLValueString($brewerSteward, "text"),
 						   GetSQLValueString($brewerJudge, "text"),
 						   GetSQLValueString($brewerJudgeID, "text"),
+						   GetSQLValueString($brewerShirtGender, "text"),
+						   GetSQLValueString($brewerShirtSize, "text"),
 						   GetSQLValueString($brewerJudgeMead, "text"),
 						   GetSQLValueString($brewerJudgeRank, "text"),
 						   GetSQLValueString($location_pref1, "text"),
@@ -209,6 +217,8 @@ if (isset($_SERVER['HTTP_REFERER'])) {
 			echo $brewerPhone1."<br>";
 			echo $brewerPhone2."<br>";
 			echo $brewerClubs."<br>";
+			echo $brewerShirtGender."<br>";
+			echo $brewerShirtSize."<br>";
 			echo $brewerAHA."<br>";
 			echo $brewerStaff."<br>";
 			echo $brewerSteward."<br>";

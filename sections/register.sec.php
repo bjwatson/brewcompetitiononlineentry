@@ -648,6 +648,36 @@ if ($go == "default") {  ?>
             <span class="help-block"><?php echo $brewer_text_021; ?></span>
         </div>
     </div><!-- ./Form Group -->
+
+    <div class="form-group"><!-- Form Group NOT REQUIRED Select -->
+        <label for="brewerShirtGender" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 control-label">Shirt Gender</label>
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+        <p>For stewards / judges / volunteers only.</p>
+            <div class="input-group">
+                <!-- Input Here -->
+                <select class="selectpicker" name="brewerShirtGender" id="brewerShirtGender" data-size="10" data-width="fit" data-show-tick="true" data-header="Select Shirt Gender" title="Select Shirt Gender">
+                   <option value="Men" <?php if ($_COOKIE['brewerShirtGender'] == "Men") echo "SELECTED"; ?> >Men's</option>
+                   <option value="Women" <?php if ($_COOKIE['brewerShirtGender'] == "Women") echo "SELECTED"; ?> >Women's</option>
+                </select>
+            </div>
+        </div>
+
+        <label for="brewerShirtSize" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 control-label">Shirt Size</label>
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+            <div class="input-group">
+                <!-- Input Here -->
+                <select class="selectpicker" name="brewerShirtSize" id="brewerShirtSize" data-size="10" data-width="fit" data-show-tick="true" data-header="Select Shirt Size" title="Select Shirt Size">
+                   <option value="S" <?php if ($_COOKIE['brewerShirtSize'] == "S") echo "SELECTED"; ?> >Small</option>
+                   <option value="M" <?php if ($_COOKIE['brewerShirtSize'] == "M") echo "SELECTED"; ?> >Medium</option>
+                   <option value="L" <?php if ($_COOKIE['brewerShirtSize'] == "L") echo "SELECTED"; ?> >Large</option>
+                   <option value="XL" <?php if ($_COOKIE['brewerShirtSize'] == "XL") echo "SELECTED"; ?> >X-Large</option>
+                   <option value="XXL" <?php if ($_COOKIE['brewerShirtSize'] == "XXL") echo "SELECTED"; ?> >XX-Large</option>
+                   <option value="XXXL" <?php if ($_COOKIE['brewerShirtSize'] == "XXXL") echo "SELECTED"; ?> >XXX-Large</option>
+                </select>
+            </div>
+        </div>
+    </div><!-- ./Form Group -->
+
     <?php } // END if (($_SESSION['prefsProEdition'] == 0) || (($_SESSION['prefsProEdition'] == 1) && (($go == "judge") || ($go == "steward"))))?>
 
     <?php if (!$judge_hidden) {

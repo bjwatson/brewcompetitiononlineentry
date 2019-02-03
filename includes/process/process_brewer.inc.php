@@ -271,6 +271,9 @@ if ((isset($_SERVER['HTTP_REFERER'])) && (((isset($_SESSION['loginUsername'])) &
 				  brewerJudge,
 				  brewerJudgeID,
 
+				  brewerShirtGender,
+				  brewerShirtSize,
+
 				  brewerJudgeMead,
 				  brewerJudgeRank,
 				  brewerJudgeLocation,
@@ -293,7 +296,7 @@ if ((isset($_SERVER['HTTP_REFERER'])) && (((isset($_SESSION['loginUsername'])) &
 				%s, %s, %s, %s, %s,
 				%s, %s, %s, %s, %s,
 				%s, %s, %s, %s, %s,
-				%s, %s, %s)",
+				%s, %s, %s, %s, %s)",
 							   GetSQLValueString($_POST['uid'], "int"),
 							   GetSQLValueString($first_name, "text"),
 							   GetSQLValueString($last_name, "text"),
@@ -309,6 +312,8 @@ if ((isset($_SERVER['HTTP_REFERER'])) && (((isset($_SESSION['loginUsername'])) &
 							   GetSQLValueString($brewerSteward, "text"),
 							   GetSQLValueString($brewerJudge, "text"),
 							   GetSQLValueString($brewerJudgeID, "text"),
+							   GetSQLValueString($brewerShirtGender, "text"),
+							   GetSQLValueString($brewerShirtSize, "text"),
 							   GetSQLValueString($brewerJudgeMead, "text"),
 							   GetSQLValueString($brewerJudgeRank, "text"),
 							   GetSQLValueString($location_pref1, "text"),
@@ -368,6 +373,9 @@ if ((isset($_SERVER['HTTP_REFERER'])) && (((isset($_SESSION['loginUsername'])) &
 				  brewerJudge,
 				  brewerJudgeID,
 
+				  brewerShirtGender,
+				  brewerShirtSize,
+
 				  brewerJudgeMead,
 				  brewerJudgeRank,
 				  brewerJudgeLocation,
@@ -388,7 +396,7 @@ if ((isset($_SERVER['HTTP_REFERER'])) && (((isset($_SESSION['loginUsername'])) &
 				%s, %s, %s, %s, %s,
 				%s, %s, %s, %s, %s,
 				%s, %s, %s, %s, %s
-				%s. %s)",
+				%s, %s, %s, %s)",
 							   GetSQLValueString($_POST['uid'], "int"),
 							   GetSQLValueString($first_name, "text"),
 							   GetSQLValueString($last_name, "text"),
@@ -404,6 +412,8 @@ if ((isset($_SERVER['HTTP_REFERER'])) && (((isset($_SESSION['loginUsername'])) &
 							   GetSQLValueString($brewerSteward, "text"),
 							   GetSQLValueString($brewerJudge, "text"),
 							   GetSQLValueString($brewerJudgeID, "text"),
+							   GetSQLValueString($brewerShirtGender, "text"),
+							   GetSQLValueString($brewerShirtSize, "text"),
 							   GetSQLValueString($brewerJudgeMead, "text"),
 							   GetSQLValueString($rank, "text"),
 							   GetSQLValueString($location_pref1, "text"),
@@ -570,6 +580,9 @@ if ((isset($_SERVER['HTTP_REFERER'])) && (((isset($_SESSION['loginUsername'])) &
 			brewerClubs=%s,
 			brewerEmail=%s,
 
+			brewerShirtGender=%s,
+			brewerShirtSize=%s,
+
 			brewerSteward=%s,
 			brewerJudge=%s,
 			brewerJudgeID=%s,
@@ -601,6 +614,8 @@ if ((isset($_SERVER['HTTP_REFERER'])) && (((isset($_SESSION['loginUsername'])) &
 							   GetSQLValueString($brewerPhone2, "text"),
 							   GetSQLValueString($brewerClubs, "text"),
 							   GetSQLValueString(filter_var($_POST['brewerEmail'],FILTER_SANITIZE_EMAIL), "text"),
+							   GetSQLValueString($brewerShirtGender, "text"),
+							   GetSQLValueString($brewerShirtSize, "text"),
 							   GetSQLValueString($brewerSteward, "text"),
 							   GetSQLValueString($brewerJudge, "text"),
 							   GetSQLValueString($brewerJudgeID, "text"),

@@ -399,6 +399,15 @@ if ($show_judge_steward_fields) {
 	$account_display .=  "<div class=\"".$display_right_cols."\">".$club."</div>";
 	$account_display .= "</div>";
 
+	$account_display .= "<div class=\"row bcoem-account-info\">";
+	$account_display .= sprintf("<div class=\"".$display_left_cols."\"><strong>%s</strong></div>","Shirt Size");
+	if (($_SESSION['brewerJudge'] == "Y") || ($_SESSION['brewerSteward'] == "Y")) {
+		$account_display .=  "<div class=\"".$display_right_cols."\">".$_SESSION['brewerShirtGender']." - ".$_SESSION['brewerShirtSize']."</div>";
+	} else{
+		$account_display .=  "<div class=\"".$display_right_cols."\">Shirts available to judge / stewards / volunteers only</div>";
+	}
+	$account_display .= "</div>";
+
 	if (($row_brewer['brewerJudgeNotes'] != "") && (($_SESSION['brewerJudge'] == "Y") || ($_SESSION['brewerSteward'] == "Y"))) {
 		$account_display .= "<div class=\"row bcoem-account-info\">";
 		$account_display .= sprintf("<div class=\"".$display_left_cols."\"><strong>%s</strong></div>",$label_org_notes);

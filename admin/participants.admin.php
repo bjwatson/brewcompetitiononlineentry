@@ -130,15 +130,15 @@ if ($action == "print") {
 	if (($psort == "default") || ($psort == "brewer_name")) $output_datatables_aaSorting .= "[0,'asc']";
 	if ($psort == "organization") $output_datatables_aaSorting .= "[2,'asc']";
 	if ($filter == "default") 	{
-		$output_datatables_aoColumns .= "{ \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }";
+		$output_datatables_aoColumns .= "{ \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }";
 	}
 
 	if ($filter == "judges") 	{
-		$output_datatables_aoColumns .= "{ \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }";
+		$output_datatables_aoColumns .= "{ \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }";
 	}
 
 	if ($filter == "stewards") 	{
-		$output_datatables_aoColumns .= "{ \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, null, null";
+		$output_datatables_aoColumns .= "{ \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, null, null";
 	}
 
 
@@ -149,18 +149,18 @@ else {
 	if ($filter == "default") 	{
 		if ($pro_edition == 1) $output_datatables_aaSorting .= "[1,'asc']";
 		else  $output_datatables_aaSorting .= "[0,'asc']";
-		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, null, null";
+		$output_datatables_aoColumns .= "null, null, null, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, null, null";
 		if ($dbTable == "default") 	$output_datatables_aoColumns .= ",  { \"asSorting\": [  ] }";
 	}
 
 	if ($filter == "judges") 	{
 		$output_datatables_aaSorting .= "[0,'asc']";
-		$output_datatables_aoColumns .= "null, null,	null, null, null, null, null, null, { \"asSorting\": [  ] }";
+		$output_datatables_aoColumns .= "null, null, null, null, null, null, null, null, null, { \"asSorting\": [  ] }";
 	}
 
 	if ($filter == "stewards") 	{
 		$output_datatables_aaSorting .= "[0,'asc']";
-		$output_datatables_aoColumns .= "null, null,	null, null, null, null, { \"asSorting\": [  ] }";
+		$output_datatables_aoColumns .= "null, null, null, null, null, null, null, { \"asSorting\": [  ] }";
 	}
 
 	if ($filter == "with_entries") 	{
@@ -191,6 +191,7 @@ else {
 		if ($pro_edition == 1) $output_datatables_head .= "<th>Organization</th>";
 		else $output_datatables_head .= "<th class=\"".$output_hide_print."\">Club</th>";
 	}
+	$output_datatables_head .= "<th class=\"".$output_hide_print."\">Shirt</th>";
 	if ($filter == "default") {
 		$output_datatables_head .= "<th class=\"".$output_hide_print."\">Steward?</th>";
 		$output_datatables_head .= "<th class=\"".$output_hide_print."\">Judge?</th>";
@@ -429,6 +430,8 @@ do {
 			else $output_datatables_body .= $row_brewer['brewerClubs'];
 		}
 		$output_datatables_body .= "</td>";
+
+		$output_datatables_body .= "<td class=\"".$output_hide_print."\">" . $row_brewer['brewerShirtGender'] . " - " . $row_brewer['brewerShirtSize'] . "</td>";
 
 		if ($filter == "default") {
 			$output_datatables_body .= "<td class=\"".$output_hide_print."\">";

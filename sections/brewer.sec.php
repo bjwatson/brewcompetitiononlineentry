@@ -454,6 +454,35 @@ $(document).ready(function(){
         </div>
     </div><!-- ./Form Group -->
 
+    <div class="form-group"><!-- Form Group NOT REQUIRED Select -->
+        <label for="brewerShirtGender" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 control-label">Shirt Gender</label>
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+            <div class="input-group">
+                <!-- Input Here -->
+                <select class="selectpicker" name="brewerShirtGender" id="brewerShirtGender" data-size="10" data-width="fit" data-show-tick="true" data-header="Select Shirt Gender" title="Select Shirt Gender">
+                   <option value="Men" <?php if ($row_brewer['brewerShirtGender'] == "Men") echo "SELECTED"; ?> >Men's</option>
+                   <option value="Women" <?php if ($row_brewer['brewerShirtGender'] == "Women") echo "SELECTED"; ?> >Women's</option>
+                </select>
+            </div>
+        </div>
+
+        <label for="brewerShirtSize" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 control-label">Shirt Size</label>
+        <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
+            <div class="input-group">
+                <!-- Input Here -->
+                <select class="selectpicker" name="brewerShirtSize" id="brewerShirtSize" data-size="10" data-width="fit" data-show-tick="true" data-header="Select Shirt Size" title="Select Shirt Size">
+                   <option value="S" <?php if ($row_brewer['brewerShirtSize'] == "S") echo "SELECTED"; ?> >Small</option>
+                   <option value="M" <?php if ($row_brewer['brewerShirtSize'] == "M") echo "SELECTED"; ?> >Medium</option>
+                   <option value="L" <?php if ($row_brewer['brewerShirtSize'] == "L") echo "SELECTED"; ?> >Large</option>
+                   <option value="XL" <?php if ($row_brewer['brewerShirtSize'] == "XL") echo "SELECTED"; ?> >X-Large</option>
+                   <option value="XXL" <?php if ($row_brewer['brewerShirtSize'] == "XXL") echo "SELECTED"; ?> >XX-Large</option>
+                   <option value="XXXL" <?php if ($row_brewer['brewerShirtSize'] == "XXXL") echo "SELECTED"; ?> >XXX-Large</option>
+                </select>
+            </div>
+            <span class="help-block">For stewards / judges / volunteers only.</span>
+        </div>
+    </div><!-- ./Form Group -->
+
 	<?php if (($go != "entrant") && ($section != "step2")) { ?>
 
         <div class="form-group"><!-- Form Group NOT REQUIRED Text Input -->

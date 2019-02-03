@@ -323,6 +323,20 @@ $table_body1 .= "<td class='dataLabel'>Club:</td>";
 $table_body1 .= "<td class='data'>".$club."</td>";
 $table_body1 .= "</tr>";
 
+if ((!empty($_SESSION['brewerJudge']) && $_SESSION['brewerJudge'] == 'Y') || (!empty($_SESSION['brewerSteward']) &&  $_SESSION['brewerSteward'] == 'Y')) {
+	$table_body1 .= "<tr>";
+	$table_body1 .= "<td class='dataLabel'>Shirt Size</td>";
+	$table_body1 .= "<td class='data'>";
+        $table_body1 .= $_SESSION['brewerShirtGender'] . " - " . $_SESSION['brewerShirtSize'];
+	$table_body1 .= "</td>";
+	$table_body1 .= "</tr>";
+} else{
+	$table_body1 .= "<tr>";
+        $table_body1 .= "<td class='dataLabel'>Shirt Size</td>";
+        $table_body1 .= "<td class='data'>Shirts available to judge / stewards / volunteers only</td>";
+        $table_body1 .= "</tr>";
+}
+
 $table_body1 .= "<tr>";
 $table_body1 .= "<td class='dataLabel'>Available to Judge?</td>";
 $table_body1 .= "<td class='data'>";

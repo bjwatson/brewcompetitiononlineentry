@@ -253,15 +253,15 @@ if ($action == "print") {
 	
 	
 	if ($filter == "default") 	{ 
-		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null, null, null, null, null";
+		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null, null, null, null, null, null";
 	}
 	
 	if ($filter == "judges") 	{ 
-		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null, null, null, null, null, null { \"asSorting\": [  ] }";
+		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null, null, null, null, null, null, null { \"asSorting\": [  ] }";
 	}
 	
 	if ($filter == "stewards") 	{
-		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null, null, null, null, null";
+		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null, null, null, null, null, null";
 	}
 	
 
@@ -271,19 +271,19 @@ else {
 
 	if ($filter == "default") 	{ 
 		$output_datatables_aaSorting .= "[0,'asc']";
-		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, null, null";
+		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null, null, { \"asSorting\": [  ] }, { \"asSorting\": [  ] }, null, null";
 		if ($dbTable == "default") 	
 		$output_datatables_aoColumns .= ",  { \"asSorting\": [  ] }";
 	}
 	
 	if ($filter == "judges") 	{ 
 		$output_datatables_aaSorting .= "[0,'asc']";
-		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null,	null, null, null, null, null, null, { \"asSorting\": [  ] }";
+		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null, null,	null, null, null, null, null, null, { \"asSorting\": [  ] }";
 	}
 	
 	if ($filter == "stewards") 	{
 		$output_datatables_aaSorting .= "[0,'asc']";
-		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null,	null, null, null, null, { \"asSorting\": [  ] }";
+		$output_datatables_aoColumns .= "null, null, { \"asSorting\": [  ] }, null, null,	null, null, null, null, { \"asSorting\": [  ] }";
 	}
 
 }
@@ -297,9 +297,10 @@ $output_datatables_head .= "<th width='17%' class='dataHeading bdr1B'>";
 if (($totalRows_judging > 0) && (($filter == "judges") || ($filter == "stewards"))) $output_datatables_head .= "Location(s) Available"; 
 else $output_datatables_head .= "Club";
 $output_datatables_head .= "</th>";
+$output_datatables_head .= "<th width='8%' class='dataHeading bdr1B'>Shirt</th>";
 if ($filter == "default") { 
-	$output_datatables_head .= "<th width='8%' class='dataHeading bdr1B'>Steward?</th>";
-	$output_datatables_head .= "<th width='8%' class='dataHeading bdr1B'>Judge?</th>";
+	$output_datatables_head .= "<th width='4%' class='dataHeading bdr1B'>Steward?</th>";
+	$output_datatables_head .= "<th width='4%' class='dataHeading bdr1B'>Judge?</th>";
 }
 $output_datatables_head .= "<th width='15%' class='dataHeading bdr1B'>Assigned As</th>";
 if ($filter != "default") { 
@@ -362,11 +363,13 @@ do {
 		else $output_datatables_body .= $row_brewer['brewerPhone2']." (2)<br>"; 
 	}
 	$output_datatables_body .= "</td>";
-	
+
 	$output_datatables_body .= "<td class='dataList'>";
 	if (($totalRows_judging > 0) && (($filter == "judges") || ($filter == "stewards"))) $output_datatables_body .= judge_steward_availability($locations,1); else $output_datatables_body .= $row_brewer['brewerClubs'];
 	//else $output_datatables_body .= "&nbsp;";
 	$output_datatables_body .= "</td>";
+
+	$output_datatables_body .= "<td class='dataList'>". $row_brewer['brewerShirtGender']. " - " . $row_brewer['brewerShirtSize']."</td>";
 	
 	if ($filter == "default") {
 		$output_datatables_body .= "<td class='dataList'>";

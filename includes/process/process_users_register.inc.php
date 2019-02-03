@@ -65,6 +65,8 @@ if (NHC) {
 			setcookie("brewerPhone2", $_POST['brewerPhone2'], 0, "/");
 			setcookie("brewerClubs", $_POST['brewerClubs'], 0, "/");
 			setcookie("brewerAHA", $_POST['brewerAHA'], 0, "/");
+			setcookie("brewerShirtGender", $_POST['brewerShirtGender'], 0, "/");
+			setcookie("brewerShirtSize", $_POST['brewerShirtSize'], 0, "/");
 			setcookie("brewerSteward", $_POST['brewerSteward'], 0, "/");
 			setcookie("brewerJudge", $_POST['brewerJudge'], 0, "/");
 			//echo "AHA exists!";
@@ -106,6 +108,8 @@ if (NHC) {
 	setcookie("brewerPhone2", $_POST['brewerPhone2'], 0, "/");
 	setcookie("brewerClubs", $_POST['brewerClubs'], 0, "/");
 	setcookie("brewerAHA", $_POST['brewerAHA'], 0, "/");
+	setcookie("brewerShirtGender", $_POST['brewerShirtGender'], 0, "/");
+	setcookie("brewerShirtSize", $_POST['brewerShirtSize'], 0, "/");
 	setcookie("brewerSteward", $_POST['brewerSteward'], 0, "/");
 	setcookie("brewerJudge", $_POST['brewerJudge'], 0, "/");
 	$location = $base_url."index.php?section=".$section."&go=".$go."&msg=4";
@@ -129,6 +133,8 @@ if (NHC) {
 	setcookie("brewerPhone2", $_POST['brewerPhone2'], 0, "/");
 	setcookie("brewerClubs", $_POST['brewerClubs'], 0, "/");
 	setcookie("brewerAHA", $_POST['brewerAHA'], 0, "/");
+	setcookie("brewerShirtGender", $_POST['brewerShirtGender'], 0, "/");
+	setcookie("brewerShirtSize", $_POST['brewerShirtSize'], 0, "/");
 	setcookie("brewerSteward", $_POST['brewerSteward'], 0, "/");
 	setcookie("brewerJudge", $_POST['brewerJudge'], 0, "/");
 	if ($filter == "admin") $location =  $base_url."index.php?section=admin&go=entrant&action=register&msg=16";
@@ -166,6 +172,8 @@ if ((strstr($username,'@')) && (strstr($username,'.'))) {
 		setcookie("brewerPhone2", $_POST['brewerPhone2'], 0, "/");
 		setcookie("brewerClubs", $_POST['brewerClubs'], 0, "/");
 		setcookie("brewerAHA", $_POST['brewerAHA'], 0, "/");
+		setcookie("brewerShirtGender", $_POST['brewerShirtGender'], 0, "/");
+		setcookie("brewerShirtSize", $_POST['brewerShirtSize'], 0, "/");
 		setcookie("brewerSteward", $_POST['brewerSteward'], 0, "/");
 		setcookie("brewerJudge", $_POST['brewerJudge'], 0, "/");
 		
@@ -227,6 +235,8 @@ if ((strstr($username,'@')) && (strstr($username,'.'))) {
 			  brewerClubs, 
 			  brewerEmail, 
 			  
+			  brewerShirtGender, 
+			  brewerShirtSize, 
 			  brewerSteward, 
 			  brewerJudge,
 			  brewerJudgeID,
@@ -235,7 +245,7 @@ if ((strstr($username,'@')) && (strstr($username,'.'))) {
 			  brewerJudgeLocation,
 			  brewerStewardLocation,
 			  brewerAHA
-			) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+			) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
 						   GetSQLValueString($row_user['id'], "int"),
 						   GetSQLValueString(capitalize($_POST['brewerFirstName']), "text"),
 						   GetSQLValueString(capitalize($_POST['brewerLastName']), "text"),
@@ -248,6 +258,8 @@ if ((strstr($username,'@')) && (strstr($username,'.'))) {
 						   GetSQLValueString($_POST['brewerPhone2'], "text"),
 						   GetSQLValueString($_POST['brewerClubs'], "text"),
 						   GetSQLValueString($username, "text"),
+						   GetSQLValueString($_POST['brewerShirtGender'], "text"),
+						   GetSQLValueString($_POST['brewerShirtSize'], "text"),
 						   GetSQLValueString($_POST['brewerSteward'], "text"),
 						   GetSQLValueString($_POST['brewerJudge'], "text"),
 						   GetSQLValueString($_POST['brewerJudgeID'], "text"),
@@ -274,7 +286,9 @@ if ((strstr($username,'@')) && (strstr($username,'.'))) {
 			  brewerPhone2, 
 			  brewerClubs, 
 			  brewerEmail, 
-			  
+			 
+			  brewerShirtGender,
+			  brewerShirtSize, 
 			  brewerSteward, 
 			  brewerJudge,
 			  brewerJudgeID,
@@ -282,7 +296,7 @@ if ((strstr($username,'@')) && (strstr($username,'.'))) {
 			  brewerJudgeRank,
 			  brewerJudgeLocation,
 			  brewerStewardLocation
-			) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+			) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
 						   GetSQLValueString($row_user['id'], "int"),
 						   GetSQLValueString(capitalize($_POST['brewerFirstName']), "text"),
 						   GetSQLValueString(capitalize($_POST['brewerLastName']), "text"),
@@ -295,6 +309,8 @@ if ((strstr($username,'@')) && (strstr($username,'.'))) {
 						   GetSQLValueString($_POST['brewerPhone2'], "text"),
 						   GetSQLValueString($_POST['brewerClubs'], "text"),
 						   GetSQLValueString($username, "text"),
+						   GetSQLValueString($_POST['brewerShirtGender'], "text"),
+						   GetSQLValueString($_POST['brewerShirtSize'], "text"),
 						   GetSQLValueString($_POST['brewerSteward'], "text"),
 						   GetSQLValueString($_POST['brewerJudge'], "text"),
 						   GetSQLValueString($_POST['brewerJudgeID'], "text"),

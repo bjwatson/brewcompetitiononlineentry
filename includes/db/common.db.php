@@ -225,6 +225,8 @@ else {
 		$_SESSION['brewerPhone2'] = $row_name['brewerPhone2'];
 		$_SESSION['brewerClubs'] = $row_name['brewerClubs'];
 		$_SESSION['brewerNickname'] = $row_name['brewerNickname'];
+		$_SESSION['brewerShirtGender'] = $row_name['brewerShirtGender'];
+                $_SESSION['brewerShirtSize'] = $row_name['brewerShirtSize'];
 		$_SESSION['brewerSteward'] = $row_name['brewerSteward'];
 		$_SESSION['brewerJudge'] = $row_name['brewerJudge'];
 		$_SESSION['brewerJudgeID'] = $row_name['brewerJudgeID'];

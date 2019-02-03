@@ -274,7 +274,9 @@ if (((isset($_SESSION['loginUsername'])) && (isset($_SESSION['userLevel']))) || 
 					  brewerPhone2, 
 					  brewerClubs, 
 					  brewerEmail, 
-					  
+					 
+					  brewerShirtGender.
+					  brewerShirtSize,
 					  brewerSteward, 
 					  brewerJudge,
 					  brewerJudgeID,
@@ -284,7 +286,7 @@ if (((isset($_SESSION['loginUsername'])) && (isset($_SESSION['userLevel']))) || 
 					  brewerStewardLocation,
 					  brewerAHA,
 					  brewerDropOff
-					) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+					) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
 								   GetSQLValueString($_POST['uid'], "int"),
 								   GetSQLValueString(capitalize($_POST['brewerFirstName']), "text"),
 								   GetSQLValueString(capitalize($_POST['brewerLastName']), "text"),
@@ -297,6 +299,8 @@ if (((isset($_SESSION['loginUsername'])) && (isset($_SESSION['userLevel']))) || 
 								   GetSQLValueString($_POST['brewerPhone2'], "text"),
 								   GetSQLValueString($_POST['brewerClubs'], "text"),
 								   GetSQLValueString($_POST['brewerEmail'], "text"),
+								   GetSQLValueString($_POST['brewerShirtGender'], "text"),
+								   GetSQLValueString($_POST['brewerShirtSize'], "text"),
 								   GetSQLValueString($_POST['brewerSteward'], "text"),
 								   GetSQLValueString($_POST['brewerJudge'], "text"),
 								   GetSQLValueString($_POST['brewerJudgeID'], "text"),
@@ -347,7 +351,9 @@ if (((isset($_SESSION['loginUsername'])) && (isset($_SESSION['userLevel']))) || 
 					  brewerPhone2, 
 					  brewerClubs, 
 					  brewerEmail, 
-					  
+					 
+					  brewerShirtGender,
+					  brewerShirtSize, 
 					  brewerSteward, 
 					  brewerJudge,
 					  brewerJudgeID,
@@ -356,7 +362,7 @@ if (((isset($_SESSION['loginUsername'])) && (isset($_SESSION['userLevel']))) || 
 					  brewerJudgeLocation,
 					  brewerStewardLocation,
 					  brewerDropOff
-					) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
+					) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)",
 								   GetSQLValueString($_POST['uid'], "int"),
 								   GetSQLValueString(capitalize($_POST['brewerFirstName']), "text"),
 								   GetSQLValueString(capitalize($_POST['brewerLastName']), "text"),
@@ -369,6 +375,8 @@ if (((isset($_SESSION['loginUsername'])) && (isset($_SESSION['userLevel']))) || 
 								   GetSQLValueString($_POST['brewerPhone2'], "text"),
 								   GetSQLValueString($_POST['brewerClubs'], "text"),
 								   GetSQLValueString($_POST['brewerEmail'], "text"),
+								   GetSQLValueString($_POST['brewerShirtGender'], "text"),
+								   GetSQLValueString($_POST['brewerShirtSize'], "text"),
 								   GetSQLValueString($_POST['brewerSteward'], "text"),
 								   GetSQLValueString($_POST['brewerJudge'], "text"),
 								   GetSQLValueString($_POST['brewerJudgeID'], "text"),
@@ -472,7 +480,9 @@ if (((isset($_SESSION['loginUsername'])) && (isset($_SESSION['userLevel']))) || 
 				brewerPhone2=%s, 
 				brewerClubs=%s, 
 				brewerEmail=%s, 
-				
+			
+				brewerShirtGender=%s,
+				brewerShirtSize=%s,	
 				brewerSteward=%s, 
 				brewerJudge=%s, 
 				brewerJudgeID=%s, 
@@ -496,6 +506,8 @@ if (((isset($_SESSION['loginUsername'])) && (isset($_SESSION['userLevel']))) || 
 								   GetSQLValueString($_POST['brewerPhone2'], "text"),
 								   GetSQLValueString($_POST['brewerClubs'], "text"),
 								   GetSQLValueString($_POST['brewerEmail'], "text"),
+								   GetSQLValueString($_POST['brewerShirtGender'], "text"),
+								   GetSQLValueString($_POST['brewerShirtSize'], "text"),
 								   GetSQLValueString($_POST['brewerSteward'], "text"),
 								   GetSQLValueString($_POST['brewerJudge'], "text"),
 								   GetSQLValueString($_POST['brewerJudgeID'], "text"),

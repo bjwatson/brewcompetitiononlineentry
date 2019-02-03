@@ -366,6 +366,25 @@ if ($go == "default") { ?>
   		<td class="data">&nbsp;</td>
   		<td class="data">To be considered for a GABF Pro-Am brewing opportunity you must be an AHA member.</td>
 	</tr>
+	        <tr>
+                <td class="dataLabel">Shirt Size</td>
+                <td class="data">
+	          <select name="brewerShirtGender">		
+		    <option value="Men" <?php if ($_COOKIE['brewerShirtGender'] == "Men") echo "selected"; ?> >Men's</option>
+ 		    <option value="Women" <?php if ($_COOKIE['brewerShirtGender'] == "Women") echo "selected"; ?> >Women's</option>
+		  </select>
+		  <select name="brewerShirtSize">
+                    <option value="S" <?php if ($_COOKIE['brewerShirtSize'] == "S") echo "selected"; ?> >Small</option>
+                    <option value="M" <?php if ($_COOKIE['brewerShirtSize'] == "M") echo "selected"; ?> >Medium</option>
+                    <option value="L" <?php if ($_COOKIE['brewerShirtSize'] == "L") echo "selected"; ?> >Large</option>
+                    <option value="XL" <?php if ($_COOKIE['brewerShirtSize'] == "XL") echo "selected"; ?> >X-Large</option>
+                    <option value="XXL" <?php if ($_COOKIE['brewerShirtSize'] == "XXL") echo "selected"; ?> >XX-Large</option>
+                    <option value="XXXL" <?php if ($_COOKIE['brewerShirtSize'] == "XXXL") echo "selected"; ?> >XXX-Large</option>
+		  </select>
+		</td>
+                <td class="data">&nbsp;</td>
+                <td class="data">For stewards / judges / volunteers only</td>
+        </tr>
 <?php if ($go != "entrant") { ?>
 	<tr>
       <td class="dataLabel">Stewarding:</td>

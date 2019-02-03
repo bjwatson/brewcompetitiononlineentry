@@ -279,6 +279,25 @@ if (TESTING) {
   <?php } ?>
   	</div>
 </div>
+<!--
+<div style="padding: 14px">
+LABBC 2016 Winners are posted at <a href="http://belgianbrewchallenge.com">belgianbrewchallenge.com</a>!<br><br>
+
+Thanks to everyone who participated.  A couple of special thank you’s:<br><br>
+
+<a href="http://comp.belgianbrewchallenge.com/index.php?section=sponsors">Thank you to all of our sponsors</a>!  Without you we couldn’t host this event every year.<br><br>
+
+Thank you to Neil Saund for hosting us at his house for judging again!<br><br>
+
+Thanks to everyone on the organizing committee for helping us improve on the process from last year.<br><br>
+
+And thank you to all of the volunteers from judging day.  All of the judges, stewards and Chef Ian for preparing another amazing meal for the volunteers!<br><br>
+
+We are handing out awards in person at the next Pacific Gravity club meeting which is <a href="http://pacificgravity.com/event-calendar/">April 21st @ Terry Malloy’s house</a>.  If you can’t make it to the meeting I will be shipping out ribbons that weekend, so you should receive yours within a few weeks.  Please join us for this club meeting.  We will be pouring the left over bottles from the competition for everyone in attendance.  This club meeting is also our “Belgian” club meeting where we ask our club members to bring Belgian beers.  We would love it if participants brought along their winning beers to share!  If you donated a cooler for the event we will have them on site @ Terry’s for you to pick up.<br><br>
+
+I will be in touch with our BOS winner Derek to help start coordinating the process of brewing his beer a @Monkish!<br><br>
+</div>
+-->
 </div>
 <a name="bottom"></a>
 <div id="footer">

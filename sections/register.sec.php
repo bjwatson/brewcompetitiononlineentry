@@ -652,7 +652,6 @@ if ($go == "default") {  ?>
     <div class="form-group"><!-- Form Group NOT REQUIRED Select -->
         <label for="brewerShirtGender" class="col-lg-3 col-md-3 col-sm-4 col-xs-12 control-label">Shirt Gender</label>
         <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12">
-        <p>For stewards / judges / volunteers only.</p>
             <div class="input-group">
                 <!-- Input Here -->
                 <select class="selectpicker" name="brewerShirtGender" id="brewerShirtGender" data-size="10" data-width="fit" data-show-tick="true" data-header="Select Shirt Gender" title="Select Shirt Gender">
@@ -675,6 +674,7 @@ if ($go == "default") {  ?>
                    <option value="XXXL" <?php if ($_COOKIE['brewerShirtSize'] == "XXXL") echo "SELECTED"; ?> >XXX-Large</option>
                 </select>
             </div>
+            <span class="help-block">For stewards / judges / volunteers only.</span>
         </div>
     </div><!-- ./Form Group -->
 
